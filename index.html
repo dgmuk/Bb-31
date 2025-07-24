@@ -1,1 +1,185 @@
-1
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Упражнение: «Образ 2.0»</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Исправление для Google Sites */
+        html, body {
+            height: auto !important;
+            min-height: 1px !important;
+            overflow: visible !important; 
+        }
+
+        /* Анимация для плавного появления блоков */
+        .fade-in-item {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Интерактивное свечение карточек */
+        .interactive-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .interactive-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.2); /* Violet glow */
+        }
+        
+        /* Стилизация для выбираемых утверждений */
+        .affirmation-card {
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            border: 2px solid #4b5563;
+        }
+        .affirmation-card.selected {
+            border-color: #f59e0b; /* amber-500 */
+            background-color: #78350f; /* amber-900/50 */
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <div id="main-container" class="container mx-auto max-w-3xl p-4 sm:p-8">
+        
+        <!-- Заголовок -->
+        <header class="text-center mb-10 fade-in-item">
+            <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight">
+                🧠 Упражнение: "Образ 2.0"
+            </h1>
+            <p class="mt-4 text-lg text-gray-400">Перезагрузка восприятия себя через работу с телом, эмоциями и вниманием</p>
+        </header>
+        
+        <!-- Вступительные блоки -->
+        <div class="bg-gray-800 rounded-2xl p-6 mb-6 fade-in-item" style="animation-delay: 100ms;">
+            <h3 class="font-bold text-xl text-white mb-3">🔹 Зачем это нужно</h3>
+            <p class="text-gray-300">Ты уже действуешь по-другому, но всё ещё можешь чувствовать себя “прежним”:</p>
+            <ul class="list-disc list-inside text-gray-300 space-y-1 mt-2">
+                <li>неуверенным;</li>
+                <li>не таким;</li>
+                <li>всё ещё жирным;</li>
+                <li>не до конца изменившимся.</li>
+            </ul>
+            <p class="mt-3 font-semibold text-violet-400">Это разрыв между реальными изменениями и образом себя в голове. Это нормально. И мы будем его закрывать.</p>
+        </div>
+        <div class="bg-gray-800 rounded-2xl p-6 mb-12 fade-in-item" style="animation-delay: 200ms;">
+            <h3 class="font-bold text-xl text-white mb-3">🔹 Как выполнять</h3>
+            <p class="text-gray-300">📆 Делать 1 раз в день, утром или вечером. 5–10 минут. Можно перед зеркалом, можно в тетради.</p>
+        </div>
+
+        <!-- Блоки с шагами -->
+        <main class="space-y-8">
+            <h2 class="text-3xl font-bold text-center text-white fade-in-item" style="animation-delay: 300ms;">Инструкция (3 шага)</h2>
+            
+            <!-- Шаг 1 -->
+            <div class="bg-gray-800 rounded-2xl shadow-lg p-6 fade-in-item interactive-card" style="animation-delay: 400ms;">
+                <h3 class="font-bold text-2xl text-white mb-4">Шаг 1. Контакт с телом (2 минуты)</h3>
+                <ul class="space-y-3 list-decimal list-inside text-gray-300">
+                    <li>Стань перед зеркалом (или сядь спокойно).</li>
+                    <li>Сделай 3 глубоких вдоха и выдоха.</li>
+                </ul>
+                <div class="mt-4 bg-gray-700/50 p-4 rounded-lg">
+                    <p class="font-semibold text-lg text-white">Задай себе вопрос:</p>
+                    <p class="mt-2 text-violet-300 italic text-xl">"Где в теле я чувствую силу сегодня?"</p>
+                </div>
+                <p class="mt-3 text-gray-400">И просто зафиксируй: в груди, спине, руках, животе. Даже если пока "ничего не чувствую", это тоже наблюдение.</p>
+            </div>
+
+            <!-- Шаг 2 -->
+            <div class="bg-gray-800 rounded-2xl shadow-lg p-6 fade-in-item interactive-card" style="animation-delay: 500ms;">
+                <h3 class="font-bold text-2xl text-white mb-4">Шаг 2. Сфокусируйся на изменениях (2–3 минуты)</h3>
+                <p class="text-gray-300 mb-4">Посмотри на себя и задай вопросы:</p>
+                <ul class="space-y-2 list-disc list-inside text-gray-300 mb-4">
+                    <li>Что изменилось с начала программы?</li>
+                    <li>Где моё тело стало другим (в форме, в ощущении, в осанке)?</li>
+                    <li>Что я делаю сейчас, чего раньше не делал?</li>
+                </ul>
+                <p class="text-gray-300 mb-2 font-semibold">Напиши или проговори 3 изменения, которые ты видишь/ощущаешь. Пример:</p>
+                 <div class="bg-gray-700/50 p-4 rounded-lg text-gray-300 italic">
+                    <p>– Я держу осанку увереннее</p>
+                    <p>– У меня уменьшился живот</p>
+                    <p>– Я 5 недель тренируюсь и не сдался</p>
+                </div>
+            </div>
+
+            <!-- Шаг 3 -->
+            <div class="bg-gray-800 rounded-2xl shadow-lg p-6 fade-in-item interactive-card" style="animation-delay: 600ms;">
+                <h3 class="font-bold text-2xl text-white mb-4">Шаг 3. Утверждение нового образа (2 минуты)</h3>
+                <p class="text-gray-300 mb-4">Выбери 1 из фраз или сформулируй свою и произнеси её вслух, глядя на себя в зеркало:</p>
+                <div id="affirmations" class="space-y-3">
+                    <div class="affirmation-card p-4 rounded-lg flex items-center"><span class="mr-3 text-xl">🧠</span><span class="flex-1">"Я в процессе становления лучшей версии себя"</span></div>
+                    <div class="affirmation-card p-4 rounded-lg flex items-center"><span class="mr-3 text-xl">🧠</span><span class="flex-1">"Я заслуживаю уважения и от других, и от себя"</span></div>
+                    <div class="affirmation-card p-4 rounded-lg flex items-center"><span class="mr-3 text-xl">🧠</span><span class="flex-1">"Я человек, который доводит до конца"</span></div>
+                    <div class="affirmation-card p-4 rounded-lg flex items-center"><span class="mr-3 text-xl">🧠</span><span class="flex-1">"Я строю, а не уничтожаю"</span></div>
+                    <div class="affirmation-card p-4 rounded-lg flex items-center"><span class="mr-3 text-xl">🧠</span><span class="flex-1">"Я силён. Я держусь. Я меняюсь."</span></div>
+                </div>
+            </div>
+
+            <!-- Почему это работает -->
+            <div class="border-2 border-teal-500 rounded-2xl p-6 fade-in-item" style="animation-delay: 700ms;">
+                <h3 class="font-bold text-2xl text-teal-400 mb-4 text-center">🔹 Почему это работает!?</h3>
+                <p class="text-center text-gray-300">Это упражнение не про "аффирмации". Это про сознательную тренировку взгляда на себя, который будет соответствовать твоим реальным действиям и усилиям.</p>
+            </div>
+            
+        </main>
+
+        <!-- Подвал -->
+        <footer class="text-center mt-12 border-t border-gray-700 pt-6">
+            <p class="text-sm text-gray-500">📍 Рекомендовано выполнять ежедневно в течение недели. Материал недели 5. Программа Body Balance.</p>
+        </footer>
+
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('main-container');
+            const affirmations = document.querySelectorAll('#affirmations .affirmation-card');
+
+            // Логика для выбора утверждения
+            affirmations.forEach(card => {
+                card.addEventListener('click', () => {
+                    affirmations.forEach(item => item.classList.remove('selected'));
+                    card.classList.add('selected');
+                });
+            });
+
+            // Исправление высоты для Google Sites
+            if ('ResizeObserver' in window) {
+                const observer = new ResizeObserver(entries => {
+                    if (entries.length > 0) {
+                        const height = entries[0].target.scrollHeight;
+                        document.body.style.height = height + 'px';
+                        document.documentElement.style.height = height + 'px';
+                    }
+                });
+                if (container) {
+                    observer.observe(container);
+                }
+            } else {
+                const resizeFallback = () => {
+                    if(container) document.body.style.height = container.scrollHeight + 'px';
+                };
+                setInterval(resizeFallback, 300);
+                window.addEventListener('resize', resizeFallback);
+            }
+        });
+    </script>
+</body>
+</html>
